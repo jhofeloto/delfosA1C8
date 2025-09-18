@@ -556,7 +556,7 @@ EJECUTA ESTOS COMANDOS EN LA TERMINAL:
 
 # 1. CONFIGURAR GIT (si no lo has hecho)
 git config --global user.name "jhofeloto"
-git config --global user.email "tu-email@example.com"
+git config --global user.email "jhofeloto@41gu5.com"
 
 # 2. INICIALIZAR Y AGREGAR ARCHIVOS
 git init
@@ -568,10 +568,7 @@ git remote add origin https://github.com/jhofeloto/delfosA1C8.git
 
 # 4. SUBIR A GITHUB
 git branch -M main
-git push -u origin main --force
-
-# Si tienes error de autenticación, usa:
-# git push https://TU_TOKEN@github.com/jhofeloto/delfosA1C8.git main --force
+git push -u origin main
 
 # 5. INSTALAR Y EJECUTAR
 pip install -r requirements.txt
