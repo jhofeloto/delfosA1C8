@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.pyc
+venv/
+env/
+.env
+*.pkl
+*.joblib
+.DS_Store
+.vscode/
+.idea/
+data/raw/*.csv
+data/processed/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+models/*.pkl
+!models/.gitkeep
