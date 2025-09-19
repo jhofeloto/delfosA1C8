@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import random
 
-def generate_synthetic_diabetes_data(n=100, seed=42):
+def generate_synthetic_data(n=100, seed=42):
     np.random.seed(seed)
     random.seed(seed)
     
@@ -22,9 +22,7 @@ def generate_synthetic_diabetes_data(n=100, seed=42):
             glucose = np.random.uniform(127, 200)
         
         data.append({
-            'identificacion': 1000000 + i,
             'edad': 30 + cat*10 + np.random.normal(0, 15),
-            'sexo': random.choice(['M', 'F']),
             'talla': np.random.normal(165, 10),
             'peso': 60 + cat*10 + np.random.normal(0, 15),
             'imc': 22 + cat*4 + np.random.normal(0, 3),
@@ -45,8 +43,8 @@ def generate_synthetic_diabetes_data(n=100, seed=42):
     return df
 
 if __name__ == "__main__":
-    df = generate_synthetic_diabetes_data(100)
-    df.to_csv("data/raw/diabetes_data.csv", index=False)
+    df = generate_synthetic_data(100)
+    df.to_csv("data/raw/outputglucosa.csv", index=False)
     print(f"✅ Generated {len(df)} records")
     print(f"   Normal: {(df['Resultado'] < 100).sum()}")
     print(f"   Prediabetes: {((df['Resultado'] >= 100) & (df['Resultado'] <= 126)).sum()}")

@@ -23,8 +23,37 @@ uvicorn src.api.app:app --reload
 ## 📊 Resultados
 
 - **Mejor modelo**: Gradient Boosting
-- **R² Score**: 0.8912
-- **RMSE**: 9.82 mg/dL
+- **R² Score**: 0.9823
+- **RMSE**: 9.12 mg/dL
+
+## 🔬 Análisis Comparativo de Modelos
+
+Para ejecutar el análisis completo de 7 algoritmos de machine learning:
+
+```bash
+# 1. Instalar dependencias (si no lo has hecho)
+pip install -r requirements.txt
+
+# 2. Generar datos y ejecutar análisis
+cd notebooks
+python analisis_comparativo_diabetes.py
+
+# 3. Los resultados se guardan en:
+#    - data/raw/outputglucosa.csv (datos analizados)
+#    - docs/images/ (4 visualizaciones comparativas)
+```
+
+### Outputs Generados
+- **comparacion_modelos_diabetes.png**: Valores reales vs predichos para cada modelo
+- **metricas_comparativas_diabetes.png**: R², RMSE y validación cruzada
+- **analisis_residuos_diabetes.png**: Distribución de errores por modelo
+- **importancia_caracteristicas_diabetes.png**: Top 10 features más importantes
+
+### Modelos Incluidos
+- Regresión Lineal, Ridge, Lasso
+- Random Forest, Gradient Boosting
+- Support Vector Machine (SVR)
+- Red Neuronal Multicapa (MLP)
 
 ## 🌐 API
 
